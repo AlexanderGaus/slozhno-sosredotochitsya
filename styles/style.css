@@ -169,7 +169,7 @@
   margin-block-end: 10px;
 }
 
-.more-info{
+.more-info {
   margin-block-end: 20px;
 }
 
@@ -188,8 +188,8 @@
 }
 
 .text-link {
-  text-decoration: none; 
   text-shadow: 1px 1px 0 var(--main-color);
+  text-decoration: none; 
 }
 
 .text-link:hover {
