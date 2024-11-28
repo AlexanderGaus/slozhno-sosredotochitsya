@@ -189,7 +189,7 @@
 
 .text-link {
   text-shadow: 1px 1px 0 var(--main-color);
-  text-decoration: none; 
+  text-decoration: none;
 }
 
 .text-link:hover {
