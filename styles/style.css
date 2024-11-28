@@ -2,4 +2,333 @@
 
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+  min-inline-size: 375px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 668px 1fr 668px;
+  gap: 40px;
+  padding: 0 var(--padding-main);
+  background-image: var(--bg-image);
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  object-fit: cover;
+}
+
+.header {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: 1fr min-content 1fr;
+  align-items: center;
+}
+
+.decorated-zone {
+  position: relative;
+}
+
+.decorated-zone::before {
+  content: '';
+  position: absolute;
+  top: var(--padding-main);
+  right: var(--padding-main);
+  width: 25px;
+  height: 25px;
+  border-top: 1px solid var(--main-color);
+  border-right: 1px solid var(--main-color);
+}
+
+.decorated-zone::after {
+  content: '';
+  position: absolute;
+  bottom: var(--padding-main);
+  left: 0;
+  width: 25px;
+  height: 25px;
+  border-bottom: 1px solid var(--main-color);
+  border-left: 1px solid var(--main-color);
+}
+
+.rec-decor::before {
+  position: absolute;
+  content: "REC";
+  color: var(--main-color);
+  font-weight: 400;
+  line-height: 25px;
+  top: var(--padding-main);
+  right: var(--padding-rec-decor);
+}
+
+.rec-decor::after {
+  content: '';
+  position: absolute;
+  width: 9px;
+  height: 9px;
+  top: var(--padding-krug);
+  right: var(--padding-krug);
+  align-self: center;
+  background-color: var(--main-color);
+  border-radius: 50%;
+  box-shadow: 0 0 4px 3px var(--main-color);
+}
+
+.header__theme-menu {
+  display: block;
+  text-align: right;
+  margin-block-start: 39px;
+}
+
+.header__theme-menu-button {
+  min-width: 70px;
+  height: 26px;
+  color: var(--title-main-color);
+  text-transform: lowercase;
+  background-color: transparent;
+  border: none;
+  font-size: var(--font-size_s);
+  font-weight: var(--font-weight_default);
+  line-height: var(--line-height_s);
+  margin-block-start: 10px;
+
+}
+
+.header__theme-menu-button:hover {
+  cursor: pointer;
+  border: 1px solid var(--title-main-color);
+}
+
+.header__theme-menu-button:focus-visible {
+  outline: none;
+  border-bottom: 1px solid var(--main-color);
+}
+
+@media (prefers-color-scheme: dark) {
+  .header__theme-menu-button_active {
+    pointer-events: none;
+  }
+}
+
+
+.header-title {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  font-weight: 700;
+  line-height: 95.7px;
+  color: var(--title-color);
+  text-shadow: 4px 4px 0 var(--main-color);
+  margin-block-start: 65px;
+  margin-block-end: 55px;
+}
+
+
+.header-text {
+  display: block;
+  font-size: var(--font-size_s);
+  font-weight: 700;
+  line-height: 23.4px;
+  text-align: left;
+  margin-block-end: 66px;
+}
+
+.title-decor {
+  background-color: var(--main-color);
+  color: #000028;
+}
+
+.list-themes {
+  display: grid;
+  gap: 50px;
+}
+
+.list-themes:last-child {
+  margin-block-end: 50px;
+}
+
+.themes {
+  display: grid;
+}
+
+.title-theme {
+  color: var(--title-main-color);
+  font-size: var(--font-size_s);
+  font-weight: 700;
+  line-height: var(--line-height_m);
+  margin-block-end: 20px;
+}
+
+.list-point {
+  display: grid;
+  gap: 10px;
+}
+
+.title-point {
+  font-size: var(--font-size_s);
+  font-weight: 700;
+  line-height: var(--line-height_m);
+  margin-block-end: 10px;
+}
+
+.point-text {
+  font-size: var(--font-size_s);
+  font-weight: var(--font-weight_default);
+  line-height: var(--line-height_m);
+  color: var(--text-color);
+}
+
+.text-link {
+  text-decoration: none; 
+  text-shadow: 1px 1px 0 var(--main-color);
+}
+
+.text-link:hover {
+  padding-top: 1px;
+  border-bottom: 1px solid var(--text-color);
+}
+
+.text-link:focus-visible {
+  outline: 1px solid var(--text-color);
+  outline-offset: 1px;
+}
+
+.gallery-items {
+  padding-top: 10px;
+  display: grid;
+  grid-template-rows: 142px 355px 237px 355px 237px;
+  gap: 10px;
+}
+
+
+.images {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  min-height: 100vh;
+}
+
+.footer-title {
+  font-size: 116px;
+  font-weight: 700;
+  line-height: 95.7px;
+  color: var(--title-color);
+  text-shadow: 2px 2px 0 var(--main-color);
+}
+
+@media (width >= 768px) {
+
+  .page {
+    padding: 0 20px;
+    gap: 60px;
+    grid-template-rows: 768px 1fr 768px;
+  }
+
+  .style-for-header-text {
+    text-align: right;
+  }
+
+  .header-text {
+    display: inline-block;
+    width: calc(50vw - 20px);
+    margin-block-start: 160px;
+    margin-block-end: 183px;
+  }
+
+  .list-themes {
+    gap: 80px;
+  }
+
+  .list-themes:last-child {
+    margin-block-end: 80px;
+  }
+
+  .header-title {
+    margin: -20px;
+  }
+
+  .themes-decor{
+    grid-template-columns: 236px 1fr;
+    gap: 20px;
+  }
+
+  .title-theme-medium {
+    width: 150px;
+  }
+
+  .themes-decor .title-theme {
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+
+  .themes-decor .list-point {
+    grid-column-start: 2;
+    grid-column-end: 2;
+  }
+
+  .gallery-items {
+    padding-top: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: none;
+    gap: 20px;
+  }
+
+  .photo-item:first-child {
+    grid-column: span 2;
+  }
+
+  .photo-item:nth-child(2) {
+    grid-row: span 2;
+  }
+  
+  .photo-item:nth-child(3) {
+    grid-row: span 2;
+  }
+  
+  .photo-item:last-child {
+    grid-column: span 2;
+  }
+  
+}
+
+@media (width >= 1024px) {
+
+  .header {
+    grid-template-rows: 1fr 130px 1fr;
+  }
+
+  .header__theme-menu {
+    display: flex;
+    justify-content: center;
+    margin-block-start: 0;
+  }
+
+  .header__theme-menu-list {
+    display: flex;
+    padding-block-end: 273px;
+  }
+
+  .header-title {
+    font-size: 130px;
+  }
+
+  .list-decor {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .footer-title {
+    font-size: var(--title-size-big);
+  }
+
+  .themes-decor{
+    grid-template-columns: 315px 1fr;
+    gap: 20px;
+  }
 }
