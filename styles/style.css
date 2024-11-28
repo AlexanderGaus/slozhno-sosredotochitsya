@@ -31,7 +31,7 @@
   content: '';
   position: absolute;
   top: var(--padding-main);
-  right: var(--padding-main);
+  right: 0;
   width: 25px;
   height: 25px;
   border-top: 1px solid var(--text-color);
@@ -56,7 +56,7 @@
   font-weight: 400;
   line-height: 25px;
   top: var(--padding-main);
-  right: var(--padding-rec-decor);
+  right: calc(var(--padding-rec-decor) - var(--padding-main));
 }
 
 .rec-decor::after {
@@ -65,7 +65,7 @@
   width: 9px;
   height: 9px;
   top: var(--padding-krug);
-  right: var(--padding-krug);
+  right: calc(var(--padding-krug) - var(--padding-main));
   align-self: center;
   background-color: var(--main-color);
   border-radius: 50%;
@@ -75,7 +75,7 @@
 .header__theme-menu {
   display: block;
   text-align: right;
-  margin-block-start: 75px;
+  margin-block-start: calc(75px - var(--padding-main));
 }
 
 .header__theme-menu-button {
@@ -159,14 +159,14 @@
 
 .list-point {
   display: grid;
-  gap: 10px;
+  gap: 20px;
 }
 
 .title-point {
   font-size: var(--font-size_s);
   font-weight: 700;
   line-height: var(--line-height_m);
-  margin-block-end: 20px;
+  margin-block-end: 10px;
 }
 
 .title-point-s {
@@ -236,18 +236,16 @@ footer {
     grid-template-rows: 768px 1fr 768px;
   }
 
-  .header__theme-menu {
-    margin-block-start: 193px;
-  }
 
   .style-for-header-text {
+    margin-block-start: 193px;
     text-align: right;
   }
 
   .header-text {
     display: inline-block;
     width: calc(50vw - 20px);
-    padding-block-end: 183px;
+    margin-block-end: 183px;
   }
 
   .list-themes {
@@ -259,6 +257,7 @@ footer {
   }
 
   .header-title {
+    font-size: var(--title-size-big);
     margin: -20px;
   }
 
@@ -312,10 +311,6 @@ footer {
     grid-template-rows: 1fr 130px 1fr;
   }
 
-  .header-title {
-    font-size: var(--title-size-big);
-  }
-
   .header__theme-menu {
     display: flex;
     justify-content: center;
@@ -324,12 +319,9 @@ footer {
 
   .header__theme-menu-list {
     display: flex;
-    padding-block-end: 273px;
+    margin-block-end: 273px;
   }
 
-  .header-title {
-    font-size: 130px;
-  }
 
   .list-decor {
     display: grid;
