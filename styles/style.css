@@ -169,6 +169,10 @@
   margin-block-end: 10px;
 }
 
+.more-info{
+  margin-block-end: 20px;
+}
+
 .title-point-s {
   font-size: var(--font-size_s);
   font-weight: 400;
@@ -236,16 +240,15 @@ footer {
     grid-template-rows: 768px 1fr 768px;
   }
 
-
   .style-for-header-text {
     margin-block-start: 193px;
+    margin-block-end: 183px;
     text-align: right;
   }
 
   .header-text {
     display: inline-block;
     width: calc(50vw - 20px);
-    margin-block-end: 183px;
   }
 
   .list-themes {
@@ -314,12 +317,19 @@ footer {
   .header__theme-menu {
     display: flex;
     justify-content: center;
-    margin-block-start: 0;
+    margin-block-start: var(--padding-main);
+    gap: 13px;
   }
 
   .header__theme-menu-list {
     display: flex;
     margin-block-end: 273px;
+  }
+
+  .style-for-header-text {
+    margin-block-start: 114px;
+    margin-block-end: 134px;
+    text-align: right;
   }
 
 
