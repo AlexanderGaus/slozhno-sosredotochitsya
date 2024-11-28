@@ -237,13 +237,17 @@ footer {
 
   .page {
     gap: 60px;
-    grid-template-rows: 768px 1fr 768px;
+    grid-template-rows: 1024px 1fr 1024px;
   }
 
   .style-for-header-text {
-    margin-block-start: 193px;
+    margin-block-start: 162px;
     margin-block-end: 183px;
     text-align: right;
+  }
+
+  .header__theme-menu {
+    margin-block-end: 173px;
   }
 
   .header-text {
@@ -310,6 +314,11 @@ footer {
 
 @media (width >= 1024px) {
 
+  .page {
+    border-top: 1px solid transparent;
+    grid-template-rows: 768px 1fr 768px;
+  }
+
   .header {
     grid-template-rows: 1fr 130px 1fr;
   }
@@ -317,19 +326,25 @@ footer {
   .header__theme-menu {
     display: flex;
     justify-content: center;
-    margin-block-start: var(--padding-main);
-    gap: 13px;
+    margin-block-start: 10px;
+    margin-block-end: 273px;
+  }
+
+  .header__theme-menu-item {
+    margin-right: 10px;
+  }
+
+  .title-theme-medium {
+    width: 315px;
   }
 
   .header__theme-menu-list {
     display: flex;
-    margin-block-end: 273px;
   }
 
   .style-for-header-text {
     margin-block-start: 114px;
     margin-block-end: 134px;
-    text-align: right;
   }
 
 
