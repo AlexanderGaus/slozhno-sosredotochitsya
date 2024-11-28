@@ -253,7 +253,7 @@ footer {
     margin: -20px;
   }
 
-  .themes-decor{
+  .themes-decor {
     grid-template-columns: 236px 1fr;
     gap: 20px;
   }
@@ -327,7 +327,7 @@ footer {
     font-size: var(--title-size-big);
   }
 
-  .themes-decor{
+  .themes-decor {
     grid-template-columns: 315px 1fr;
     gap: 20px;
   }
