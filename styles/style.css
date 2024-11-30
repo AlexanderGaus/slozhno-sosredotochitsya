@@ -5,7 +5,6 @@
   min-inline-size: 375px;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 668px 1fr 668px;
   gap: 40px;
   padding: 0 var(--padding-main);
   background-image: var(--bg-image);
@@ -19,6 +18,7 @@
 }
 
 .header {
+  min-block-size: 668px; 
   min-height: 100vh;
   display: grid;
   grid-template-rows: 1fr min-content 1fr;
@@ -36,8 +36,8 @@
   right: 0;
   width: 25px;
   height: 25px;
-  border-top: 1px solid var(--text-color);
-  border-right: 1px solid var(--text-color);
+  border-top: 1px solid var(--main-color);
+  border-right: 1px solid var(--main-color);
 }
 
 .decorated-zone::after {
@@ -47,8 +47,8 @@
   left: 0;
   width: 25px;
   height: 25px;
-  border-bottom: 1px solid var(--text-color);
-  border-left: 1px solid var(--text-color);
+  border-bottom: 1px solid var(--main-color);
+  border-left: 1px solid var(--main-color);
 }
 
 .rec-decor::before {
@@ -66,8 +66,8 @@
   position: absolute;
   width: 9px;
   height: 9px;
-  top: var(--padding-krug);
-  right: calc(var(--padding-krug) - var(--padding-main));
+  top: var(--padding-circle);
+  right: calc(var(--padding-circle) - var(--padding-main));
   align-self: center;
   background-color: var(--main-color);
   border-radius: 50%;
@@ -94,6 +94,7 @@
 
 }
 
+
 .header__theme-menu-button:hover {
   cursor: pointer;
   border: 1px solid var(--title-main-color);
@@ -101,15 +102,8 @@
 
 .header__theme-menu-button:focus-visible {
   outline: none;
-  border-bottom: 1px solid var(--main-color);
+  border-bottom: 1px solid var(--title-main-color);
 }
-
-@media (prefers-color-scheme: dark) {
-  .header__theme-menu-button_active {
-    pointer-events: none;
-  }
-}
-
 
 .header-title {
   display: flex;
@@ -123,6 +117,9 @@
   margin-block-end: 55px;
 }
 
+.style-for-header-text {
+  margin-block-end: 66px;
+}
 
 .header-text {
   display: block;
@@ -130,7 +127,6 @@
   font-weight: 700;
   line-height: 23.4px;
   text-align: left;
-  margin-block-end: 66px;
 }
 
 .title-decor {
@@ -138,17 +134,13 @@
   color: #000028;
 }
 
-.list-themes {
+.section {
   display: grid;
-  gap: 50px;
-}
-
-.list-themes:last-child {
   margin-block-end: 50px;
 }
 
-.themes {
-  display: grid;
+.section:last-child {
+  margin-block-end: 0;
 }
 
 .title-theme {
@@ -170,6 +162,7 @@
   line-height: var(--line-height_m);
   margin-block-end: 10px;
 }
+
 
 .more-info {
   margin-block-end: 20px;
@@ -228,7 +221,7 @@ footer {
 }
 
 .footer-title {
-  font-size: 116px;
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   font-weight: 700;
   line-height: 95.7px;
   color: var(--title-color);
@@ -239,8 +232,11 @@ footer {
 
   .page {
     gap: 60px;
-    grid-template-rows: 1024px 1fr 1024px;
   }
+
+  /*.header {
+    min-block-size: 1024px;
+  }*/
 
   .style-for-header-text {
     margin-block-start: 162px;
@@ -257,12 +253,13 @@ footer {
     width: calc(50vw - 20px);
   }
 
-  .list-themes {
-    gap: 80px;
-  }
-
-  .list-themes:last-child {
+  .section {
+    display: grid;
     margin-block-end: 80px;
+  }
+  
+  .section:last-child {
+    margin-block-end: 0;
   }
 
   .header-title {
@@ -270,7 +267,7 @@ footer {
     margin: -20px;
   }
 
-  .themes-decor {
+  .section-decor {
     grid-template-columns: 236px 1fr;
     gap: 20px;
   }
@@ -279,12 +276,12 @@ footer {
     width: 150px;
   }
 
-  .themes-decor .title-theme {
+  .section-decor .title-theme {
     grid-column-start: 1;
     grid-column-end: 2;
   }
 
-  .themes-decor .list-point {
+  .section-decor .list-point {
     grid-column-start: 2;
     grid-column-end: 2;
   }
@@ -311,29 +308,38 @@ footer {
   .photo-item:last-child {
     grid-column: span 2;
   }
+
+  footer {
+    max-block-size: 1024px;
+  }
   
 }
 
 @media (width >= 1024px) {
 
-  .page {
-    border-top: 1px solid transparent;
-    grid-template-rows: 768px 1fr 768px;
-  }
-
   .header {
-    grid-template-rows: 1fr 130px 1fr;
+    min-block-size: 768px;
+    border-top: 1px solid transparent;
   }
 
   .header__theme-menu {
     display: flex;
+    align-items: start;
     justify-content: center;
-    margin-block-start: 10px;
+    margin-block-start: 0;
     margin-block-end: 273px;
   }
 
   .header__theme-menu-item {
     margin-right: 10px;
+  }
+
+  .header__theme-menu-button {
+    margin-block-start: 0;
+  }
+
+  .header-title {
+    min-height: 130px;
   }
 
   .title-theme-medium {
@@ -359,8 +365,12 @@ footer {
     font-size: var(--title-size-big);
   }
 
-  .themes-decor {
+  .section-decor {
     grid-template-columns: 315px 1fr;
     gap: 20px;
+  }
+
+  footer {
+    max-block-size: 768px;
   }
 }

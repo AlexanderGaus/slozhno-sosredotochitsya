@@ -14,8 +14,8 @@
   --page-color: #fff1f7;
   --main-color: #FF8DCB;
   --title-color: #FFC2E6;
-  --text-color: #353430;
-  --title-main-color: #353430;
+  --text-color: #000028;
+  --title-main-color: #000028;
   --bg-image: url(../images/cover-image-light.png);
 }
 
@@ -28,12 +28,16 @@
     --page-color: #fff1f7;
     --main-color: #FF8DCB;
     --title-color: #FFC2E6;
-    --text-color: #353430;
-    --title-main-color: #353430;
+    --text-color: #000028;
+    --title-main-color: #000028;
     --bg-image: url(../images/cover-image-light.png);
   }
 
   .rec-decor {
     visibility: hidden;
+  }
+
+  .header__theme-menu-button_active {
+    pointer-events: none;
   }
 }
