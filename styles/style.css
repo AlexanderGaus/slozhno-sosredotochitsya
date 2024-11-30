@@ -18,8 +18,8 @@
 }
 
 .header {
-  min-block-size: 668px; 
-  height: 100vh;
+  min-block-size: 668px;
+  min-height: 100vh;
   display: grid;
   grid-template-rows: 1fr min-content 1fr;
   align-items: center;
@@ -366,8 +366,8 @@ footer {
 
   .style-for-header-text {
     min-height: 71px;
-    margin-block-start: 110px;
-    margin-block-end: 124px;
+    margin-block-start: 114px;
+    margin-block-end: 120px;
   }
 
 
