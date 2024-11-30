@@ -251,7 +251,7 @@ footer {
 
   .style-for-header-text {
     margin-block-start: 162px;
-    margin-block-end: 183px;
+    margin-block-end: 163px;
     min-height: 117px;
     text-align: right;
   }
@@ -277,6 +277,7 @@ footer {
 
   .header-title {
     font-size: var(--title-size-big);
+    text-shadow: 4px 4px 0 #ff0070;
     margin: -20px;
   }
 
@@ -322,9 +323,6 @@ footer {
     grid-column: span 2;
   }
 
-  footer {
-    min-block-size: 1024px;
-  }
   
 }
 
@@ -368,7 +366,7 @@ footer {
 
   .style-for-header-text {
     min-height: 71px;
-    margin-block-start: 114px;
+    margin-block-start: 110px;
     margin-block-end: 124px;
   }
 
@@ -380,6 +378,7 @@ footer {
 
   .footer-title {
     font-size: var(--title-size-big);
+    text-shadow: 2px 2px 0 #ff0070;
   }
 
   .section-decor {
@@ -387,7 +386,5 @@ footer {
     gap: 20px;
   }
 
-  footer {
-    min-block-size: 768px;
-  }
+
 }
