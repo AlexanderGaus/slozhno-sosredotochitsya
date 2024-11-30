@@ -119,6 +119,7 @@
   line-height: 95.7px;
   color: var(--title-color);
   text-shadow: 4px 4px 0 var(--main-color);
+  align-content: center;
   margin-block-start: 65px;
   margin-block-end: 55px;
 }
@@ -256,7 +257,7 @@ footer {
   }
 
   .header__theme-menu {
-    margin-block-start: 192px;
+    margin-block-start: 172px;
     margin-block-end: 173px;
   }
 
@@ -368,7 +369,7 @@ footer {
   .style-for-header-text {
     min-height: 71px;
     margin-block-start: 114px;
-    margin-block-end: 134px;
+    margin-block-end: 124px;
   }
 
 
