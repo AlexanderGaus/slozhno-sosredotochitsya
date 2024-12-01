@@ -223,7 +223,7 @@
   object-position: center;
 }
 
-footer {
+.footer {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -247,13 +247,13 @@ footer {
   }
 
   .header {
+    height: 100vh;
     min-block-size: 1024px;
   }
 
   .style-for-header-text {
     margin-block-start: 167px;
     margin-block-end: 163px;
-    min-height: 117px;
     text-align: right;
   }
 
@@ -325,6 +325,7 @@ footer {
   }
 
   .footer {
+    height: 100vh;
     min-block-size: 1024px;
   }
 }
@@ -332,6 +333,7 @@ footer {
 @media (width >= 1024px) {
 
   .header {
+    height: 100vh;
     min-block-size: 768px;
     border-top: 1px solid transparent;
   }
@@ -385,6 +387,7 @@ footer {
   }
 
   .footer {
+    height: 100vh;
     min-block-size: 768px;
   }
 }
