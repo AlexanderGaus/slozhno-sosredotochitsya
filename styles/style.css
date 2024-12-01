@@ -228,7 +228,8 @@ footer {
   justify-content: center;
   align-items: center;
   position: relative;
-  min-height: 100vh;
+  height: 100vh;
+  min-block-size: 668px;
 }
 
 .footer-title {
@@ -323,7 +324,9 @@ footer {
     grid-column: span 2;
   }
 
-  
+  .footer {
+    min-block-size: 1024px;
+  }
 }
 
 @media (width >= 1024px) {
@@ -352,10 +355,6 @@ footer {
     margin-block-end: 5px;
   }
 
-  .header-title {
-    min-height: 130px;
-  }
-
   .title-theme-medium {
     width: 315px;
   }
@@ -365,9 +364,8 @@ footer {
   }
 
   .style-for-header-text {
-    min-height: 71px;
     margin-block-start: 114px;
-    margin-block-end: 120px;
+    margin-block-end: 114px;
   }
 
 
@@ -386,4 +384,7 @@ footer {
     gap: 20px;
   }
 
+  .footer {
+    min-block-size: 768px;
+  }
 }
