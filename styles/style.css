@@ -347,14 +347,13 @@
   }
 
   .header__theme-menu-item {
-    margin-block-start: 5px;
-    margin-block-end: 5px;
+    margin-block-end: 10px;
     margin-inline-end: 10px;
   }
 
   .header__theme-menu-item:last-child {
     margin-inline-end: 0;
-    margin-block-end: 5px;
+    margin-block-end: 10px;
   }
 
   .title-theme-medium {
@@ -366,7 +365,7 @@
   }
 
   .style-for-header-text {
-    margin-block-start: 114px;
+    margin-block-start: 124px;
     margin-block-end: 114px;
   }
 
