@@ -16,6 +16,7 @@
   --title-color: #FFC2E6;
   --text-color: #000028;
   --title-main-color: #000028;
+  --border-hover-color: rgba(50, 49, 45, 0.4);
   --bg-image: url(../images/cover-image-light.png);
 }
 
@@ -30,6 +31,7 @@
     --title-color: #FFC2E6;
     --text-color: #000028;
     --title-main-color: #000028;
+    --border-hover-color: rgba(50, 49, 45, 0.4);
     --bg-image: url(../images/cover-image-light.png);
   }
 
@@ -39,5 +41,6 @@
 
   .header__theme-menu-button_active {
     pointer-events: none;
+    border: 1px solid var(--title-main-color);
   }
 }

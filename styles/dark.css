@@ -16,6 +16,7 @@
   --text-color: #F1B2CE;
   --title-color: #DB00FF;
   --title-main-color: #ff0070;
+  --border-hover-color: rgba(255, 0, 112, 0.4);
   --bg-image: url(../images/cover-image-dark.png);
 }
 
@@ -26,6 +27,7 @@
 @media (prefers-color-scheme: dark) {
   .header__theme-menu-button_active {
     pointer-events: none;
+    border: solid 1px var(--title-main-color);
   }
 }
 

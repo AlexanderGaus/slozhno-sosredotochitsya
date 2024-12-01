@@ -103,7 +103,7 @@
 
 .header__theme-menu-button:hover {
   cursor: pointer;
-  border: 1px solid var(--title-main-color);
+  border: 1px solid var(--border-hover-color);
 }
 
 .header__theme-menu-button:focus-visible {
@@ -186,6 +186,10 @@
   font-weight: var(--font-weight_default);
   line-height: var(--line-height_m);
   color: var(--text-color);
+}
+
+.point-text:not(:first-child) {
+  margin-block-start: 10px;
 }
 
 .text-link {
@@ -347,13 +351,13 @@
   }
 
   .header__theme-menu-item {
-    margin-block-end: 10px;
+    margin-block-end: 15px;
     margin-inline-end: 10px;
   }
 
   .header__theme-menu-item:last-child {
     margin-inline-end: 0;
-    margin-block-end: 10px;
+    margin-block-end: 15px;
   }
 
   .title-theme-medium {
@@ -365,7 +369,7 @@
   }
 
   .style-for-header-text {
-    margin-block-start: 124px;
+    margin-block-start: 130px;
     margin-block-end: 114px;
   }
 
